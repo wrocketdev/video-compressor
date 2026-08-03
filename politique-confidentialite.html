@@ -103,10 +103,16 @@
     <td>Poursuivre une compression en cours lorsque vous quittez l'écran de l'application.</td>
     <td>Accordées automatiquement, sans écran de demande. Ne donnent accès à aucune donnée.</td>
   </tr>
+  <tr>
+    <td><code>ACCESS_NETWORK_STATE</code><br><code>WAKE_LOCK</code></td>
+    <td>Déclarées par la bibliothèque vidéo d'Android (Media3) qui effectue la compression, et non par l'application elle-même. La première permet de savoir si une connexion existe, la seconde d'empêcher le téléphone de s'endormir pendant un traitement.</td>
+    <td>Accordées automatiquement, sans écran de demande. Ne donnent accès à aucune donnée personnelle.</td>
+  </tr>
 </table>
+<p>Cette liste est exhaustive&nbsp;: elle correspond exactement à ce que Google Play affiche pour l'application, et vous pouvez l'y vérifier.</p>
 
 <h2>7. Données conservées sur l'appareil</h2>
-<p>L'application enregistre localement quelques préférences techniques (par exemple le nombre de compressions réussies, qui sert à ne proposer de laisser un avis qu'une seule fois). Ces informations ne quittent pas l'appareil et sont supprimées lorsque vous désinstallez l'application ou effacez ses données depuis les réglages Android.</p>
+<p>L'application enregistre localement quelques préférences techniques&nbsp;: le nombre de compressions réussies (qui sert à ne proposer de laisser un avis qu'une seule fois), et une petite table d'étalonnage qui retient à quel point l'encodeur de votre téléphone a suivi le débit demandé, afin que les estimations de taille deviennent plus justes à l'usage. Cette table ne contient que des nombres de débit et le nom d'un composant vidéo du système — rien qui décrive vos vidéos. Ces informations ne quittent pas l'appareil et sont supprimées lorsque vous désinstallez l'application ou effacez ses données depuis les réglages Android.</p>
 
 <h2>8. Services tiers</h2>
 <p><strong>PostHog</strong> — mesure d'audience et diagnostic technique, décrits au point 4. Seul service tiers intégré à l'application.</p>

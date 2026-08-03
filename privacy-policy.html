@@ -103,10 +103,16 @@
     <td>Keep a running compression alive when you leave the app's screen.</td>
     <td>Granted automatically, with no prompt. They give access to no data.</td>
   </tr>
+  <tr>
+    <td><code>ACCESS_NETWORK_STATE</code><br><code>WAKE_LOCK</code></td>
+    <td>Declared by the Android video library (Media3) that performs the compression, not by the app itself. The first reports whether a connection exists, the second keeps the phone from sleeping mid-processing.</td>
+    <td>Granted automatically, with no prompt. They give access to no personal data.</td>
+  </tr>
 </table>
+<p>This list is exhaustive: it matches exactly what Google Play displays for the app, where you can check it yourself.</p>
 
 <h2>7. Data kept on the device</h2>
-<p>The app stores a few technical preferences locally (for example the number of successful compressions, used to offer the review prompt only once). This information does not leave the device and is deleted when you uninstall the app or clear its data from Android settings.</p>
+<p>The app stores a few technical preferences locally: the number of successful compressions (used to offer the review prompt only once), and a small calibration table that records how closely your phone's encoder followed the requested bitrate, so that size estimates get more accurate as you use the app. That table holds bitrate numbers and the name of a system video component — nothing about your videos. This information does not leave the device and is deleted when you uninstall the app or clear its data from Android settings.</p>
 
 <h2>8. Third-party services</h2>
 <p><strong>PostHog</strong> — analytics and technical diagnostics, described in section 4. The only third-party service integrated into the app.</p>
