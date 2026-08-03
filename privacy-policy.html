@@ -35,32 +35,64 @@
 <p class="chapeau"><strong>Compress Video</strong> for Android · Version 1.0 · Last updated: 3 August 2026</p>
 
 <div class="resume">
-  <p><strong>In one sentence: this app collects no data, sends nothing over the internet, and requests no permission to access your files.</strong> Compression happens entirely on your phone.</p>
+  <p><strong>Your videos never leave your phone.</strong> Compression happens entirely on the device, and no file, excerpt, thumbnail or file name is ever sent anywhere.</p>
+  <p style="margin-top:.6rem">The app does send <strong>anonymous technical measurements</strong>, described in section 4, used to understand how it is used and to improve the accuracy of its size estimates.</p>
 </div>
 
 <h2>1. Who is responsible</h2>
 <p>The app is published by an independent developer (Kwizu Studio). For any question about this policy, write to <a href="mailto:kwizustudio@gmail.com">kwizustudio@gmail.com</a>.</p>
 
-<h2>2. No data is collected</h2>
-<p>The app does not collect, transmit or store on any server:</p>
+<h2>2. Your videos never leave your phone</h2>
+<p>Compression is performed locally by the device's video processor. No video file is uploaded, copied to a third-party service, or analysed remotely. This holds whatever the size or duration of the video.</p>
+<p>Never transmitted: your videos or any part of them, their thumbnails, their file names, their paths, or the identifiers the system assigns to the files you select.</p>
+
+<h2>3. What the app does not collect</h2>
 <ul>
-  <li>any identifying data (name, email, account, device identifier);</li>
-  <li>any usage data, audience statistics or analytics;</li>
-  <li>any advertising identifier;</li>
-  <li>any of your videos, nor any excerpt, thumbnail or metadata from them.</li>
+  <li>No identifying data: no name, no email address, no account, no phone number.</li>
+  <li>No advertising identifier, and no advertising — the app embeds no ad network.</li>
+  <li>No precise location.</li>
+  <li>No content of any kind.</li>
 </ul>
-<p>There is no user account, no sign-up, and no server operated by the publisher.</p>
+<p>There is no user account and no sign-up.</p>
 
-<h2>3. Your videos never leave your phone</h2>
-<p>Compression is performed locally by the device's video processor. No file is uploaded, copied to a third-party service, or analysed remotely. The app works entirely in airplane mode.</p>
+<h2>4. The anonymous technical measurements</h2>
+<p>To understand how the app is used, and to fix the product's main known weakness — the gap between the size announced before compression and the size actually produced, which depends on each phone's encoder model — the app sends technical measurements.</p>
 
-<h2>4. How the app accesses your videos</h2>
+<table>
+  <tr><th>Sent</th><th>Why</th></tr>
+  <tr>
+    <td>Dimensions, duration and bitrate of the input and output video; codec identity and the name of the device's hardware encoder</td>
+    <td>These are numbers and technical names. Aggregated across phone models, they let a constant calibrated on a single device be replaced by a value that is correct for yours.</td>
+  </tr>
+  <tr>
+    <td>Usage events: app opened, compression started, succeeded or failed</td>
+    <td>Measure real usage of the app and spot failures.</td>
+  </tr>
+  <tr>
+    <td>Device model, Android version, app version, language</td>
+    <td>Attach a measurement or a failure to a technical context.</td>
+  </tr>
+  <tr>
+    <td>A random installation identifier, and the IP address at the time of sending</td>
+    <td>Distinguishes two installations without identifying you. The identifier is regenerated if you reinstall the app; it is tied to no account. The IP address is inherent to any connection: it is used to infer a country, not an address.</td>
+  </tr>
+</table>
+
+<p>These measurements are processed by <strong>PostHog</strong>, on its European infrastructure, as a data processor. They are not sold, not shared with advertisers, and not used to profile or target you.</p>
+<p><strong>Legal basis</strong> (GDPR, art. 6(1)(f)): the publisher's legitimate interest in measuring how its app performs and correcting its defects. No content and no identifying data enters this processing.</p>
+
+<h2>5. How the app accesses your videos</h2>
 <p>The app is granted <strong>no permission to access your gallery or storage</strong>. It uses the Android Photo Picker: you pick a video yourself, and the system grants the app temporary access to that single file only. The app cannot browse, list or read anything else.</p>
 <p>The compressed video is saved to your gallery through MediaStore, a mechanism that likewise requires no permission.</p>
 
-<h2>5. Permissions requested</h2>
+<h2>6. Permissions requested</h2>
 <table>
   <tr><th>Permission</th><th>Why</th><th>Required?</th></tr>
+  <tr>
+    <td><code>INTERNET</code></td>
+    <td>Send the technical measurements of section 4. That is the <strong>only</strong> use of the network: no video ever goes through it.</td>
+    <td>Granted automatically, with no prompt. Compression works fully offline.</td>
+  </tr>
   <tr>
     <td><code>POST_NOTIFICATIONS</code></td>
     <td>Show compression progress in the notification shade.</td>
@@ -69,32 +101,30 @@
   <tr>
     <td><code>FOREGROUND_SERVICE</code><br><code>…_MEDIA_PROCESSING</code><br><code>…_DATA_SYNC</code></td>
     <td>Keep a running compression alive when you leave the app's screen.</td>
-    <td>Granted automatically by the system, with no prompt. They give access to no data.</td>
-  </tr>
-  <tr>
-    <td><code>WAKE_LOCK</code><br><code>ACCESS_NETWORK_STATE</code></td>
-    <td>Declared by the Android video library used for encoding. The first keeps the CPU from sleeping during a compression. The second allows reading the connection state — the app does not use it.</td>
-    <td>Granted automatically, with no prompt. They give access to no personal data.</td>
+    <td>Granted automatically, with no prompt. They give access to no data.</td>
   </tr>
 </table>
-<p>The app does <strong>not</strong> request the <code>INTERNET</code> permission. This is verifiable: it does not appear in the permission list on the Google Play listing. Without it, no network connection is possible, whatever the code does.</p>
 
-<h2>6. Data kept on the device</h2>
-<p>The app stores a few technical preferences locally (for example the last compression level you chose). This information never leaves the device and is deleted in full when you uninstall the app or clear its data from Android settings.</p>
+<h2>7. Data kept on the device</h2>
+<p>The app stores a few technical preferences locally (for example the number of successful compressions, used to offer the review prompt only once). This information does not leave the device and is deleted when you uninstall the app or clear its data from Android settings.</p>
 
-<h2>7. Third-party services</h2>
-<p>None. The app embeds no advertising network, no analytics tool, no crash reporting service and no tracking library.</p>
-<p>The only intermediary is Google Play, which distributes the app under its own privacy policy, independent of this one.</p>
+<h2>8. Third-party services</h2>
+<p><strong>PostHog</strong> — analytics and technical diagnostics, described in section 4. The only third-party service integrated into the app.</p>
+<p>The app embeds no ad network, no social network, and no payment service.</p>
+<p>Google Play distributes the app under its own privacy policy, independent of this one.</p>
 
-<h2>8. Children</h2>
-<p>The app is a general-audience utility. It is not directed at children and collects no data regardless of the user's age.</p>
+<h2>9. Retention</h2>
+<p>Technical measurements are kept for at most <strong>twelve months</strong>, then deleted. They are only useful for as long as they cover the devices and versions in circulation.</p>
 
-<h2>9. Your rights</h2>
-<p>The GDPR grants you rights of access, rectification, erasure, objection and portability. These rights apply to data held by a data controller: since nothing is collected, the publisher holds no data about you and therefore has nothing to disclose, correct or erase. The only data that exists is on your phone, under your sole control, and disappears on uninstall.</p>
-<p>You may nonetheless contact us at any time at <a href="mailto:kwizustudio@gmail.com">kwizustudio@gmail.com</a>.</p>
+<h2>10. Children</h2>
+<p>The app is a general-audience utility. It is not directed at children and collects no data that would reveal a user's age.</p>
 
-<h2>10. Changes</h2>
-<p>If a future version of the app introduced any data collection — advertising or analytics, for instance — this page would be updated <em>before</em> that version is published, and the date at the top changed accordingly.</p>
+<h2>11. Your rights</h2>
+<p>The GDPR grants you rights of access, rectification, erasure, objection and portability. Since the measurements in section 4 contain no identifying data, the publisher has in practice no way to link a record to a person, and therefore cannot retrieve "your" data from your name or address.</p>
+<p>You may nonetheless write to <a href="mailto:kwizustudio@gmail.com">kwizustudio@gmail.com</a>: if you send us your installation identifier, we will delete the corresponding records.</p>
+
+<h2>12. Changes</h2>
+<p>Any change to what the app transmits will be reflected on this page <em>before</em> the version concerned is published, and the date at the top updated accordingly.</p>
 
 <footer>
   Compress Video — Kwizu Studio · <a href="politique-confidentialite.html">Version française</a>
