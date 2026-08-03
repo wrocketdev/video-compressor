@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Politique de confidentialité — Compresser Vidéo</title>
+<style>
+  :root { color-scheme: light dark; --encre:#16161a; --papier:#fff; --sourd:#5b5b66; --trait:#e4e4ea; --accent:#e2603f; }
+  @media (prefers-color-scheme: dark) {
+    :root { --encre:#f2f2f4; --papier:#141416; --sourd:#a0a0ab; --trait:#2a2a2f; --accent:#ff7a55; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; padding:2.5rem 1.25rem 5rem; background:var(--papier); color:var(--encre);
+         font:400 16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  main { max-width:44rem; margin:0 auto; }
+  h1 { font-size:1.75rem; line-height:1.25; margin:0 0 .35rem; letter-spacing:-.02em; }
+  h2 { font-size:1.075rem; margin:2.5rem 0 .6rem; letter-spacing:-.01em; }
+  .chapeau { color:var(--sourd); margin:0 0 2rem; font-size:.925rem; }
+  .resume { border-left:3px solid var(--accent); padding:.85rem 0 .85rem 1.1rem; margin:0 0 2rem;
+            background:color-mix(in srgb, var(--accent) 6%, transparent); border-radius:0 6px 6px 0; }
+  .resume p { margin:0; }
+  table { border-collapse:collapse; width:100%; margin:1rem 0; font-size:.9rem; display:block; overflow-x:auto; }
+  th, td { text-align:left; padding:.55rem .7rem; border-bottom:1px solid var(--trait); vertical-align:top; }
+  th { font-weight:600; }
+  a { color:var(--accent); }
+  ul { padding-left:1.15rem; }
+  li { margin:.3rem 0; }
+  footer { margin-top:3.5rem; padding-top:1.25rem; border-top:1px solid var(--trait); color:var(--sourd); font-size:.875rem; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Politique de confidentialité</h1>
+<p class="chapeau">Application <strong>Compresser Vidéo</strong> (Android) · Version 1.0 · Dernière mise à jour : 3 août 2026</p>
+
+<div class="resume">
+  <p><strong>En une phrase : cette application ne collecte aucune donnée, n'envoie rien sur Internet et ne demande aucune permission d'accès à vos fichiers.</strong> La compression a lieu entièrement sur votre téléphone.</p>
+</div>
+
+<h2>1. Qui est responsable</h2>
+<p>L'application est éditée par un développeur indépendant (Kwizu Studio). Pour toute question relative à cette politique&nbsp;: <a href="mailto:kwizustudio@gmail.com">kwizustudio@gmail.com</a>.</p>
+
+<h2>2. Aucune donnée n'est collectée</h2>
+<p>L'application ne collecte, ne transmet et ne stocke sur aucun serveur&nbsp;:</p>
+<ul>
+  <li>aucune donnée d'identification (nom, e-mail, compte, identifiant d'appareil)&nbsp;;</li>
+  <li>aucune donnée d'usage, statistique d'audience ou mesure analytique&nbsp;;</li>
+  <li>aucun identifiant publicitaire&nbsp;;</li>
+  <li>aucune de vos vidéos, ni aucun extrait, miniature ou métadonnée de celles-ci.</li>
+</ul>
+<p>Il n'existe aucun compte utilisateur, aucune inscription et aucun serveur exploité par l'éditeur.</p>
+
+<h2>3. Vos vidéos ne quittent jamais votre téléphone</h2>
+<p>La compression est effectuée localement par le processeur vidéo de l'appareil. Aucun fichier n'est téléversé, copié vers un service tiers, ni analysé à distance. L'application fonctionne intégralement en mode avion.</p>
+
+<h2>4. Comment l'application accède à vos vidéos</h2>
+<p>L'application n'obtient <strong>aucune permission d'accès à votre galerie ou à votre stockage</strong>. Elle utilise le sélecteur de photos d'Android (<em>Photo Picker</em>)&nbsp;: vous choisissez vous-même une vidéo, et le système n'accorde à l'application qu'un accès temporaire à ce seul fichier. L'application ne peut ni parcourir, ni lister, ni lire quoi que ce soit d'autre.</p>
+<p>La vidéo compressée est enregistrée dans votre galerie via <em>MediaStore</em>, mécanisme qui ne requiert lui non plus aucune permission.</p>
+
+<h2>5. Permissions demandées</h2>
+<table>
+  <tr><th>Permission</th><th>Pourquoi</th><th>Obligatoire&nbsp;?</th></tr>
+  <tr>
+    <td><code>POST_NOTIFICATIONS</code></td>
+    <td>Afficher la progression de la compression dans la barre de notifications.</td>
+    <td>Non — l'application fonctionne normalement si vous la refusez.</td>
+  </tr>
+  <tr>
+    <td><code>FOREGROUND_SERVICE</code><br><code>…_MEDIA_PROCESSING</code><br><code>…_DATA_SYNC</code></td>
+    <td>Poursuivre une compression en cours lorsque vous quittez l'écran de l'application.</td>
+    <td>Accordées automatiquement par le système, sans écran de demande. Ne donnent accès à aucune donnée.</td>
+  </tr>
+  <tr>
+    <td><code>WAKE_LOCK</code><br><code>ACCESS_NETWORK_STATE</code></td>
+    <td>Déclarées par la bibliothèque vidéo d'Android utilisée pour l'encodage. La première empêche le processeur de s'endormir pendant une compression. La seconde permet de lire l'état de la connexion — l'application ne s'en sert pas.</td>
+    <td>Accordées automatiquement, sans écran de demande. Ne donnent accès à aucune donnée personnelle.</td>
+  </tr>
+</table>
+<p>L'application ne demande <strong>pas</strong> la permission <code>INTERNET</code>. C'est vérifiable&nbsp;: elle ne figure pas dans la liste des autorisations de la fiche Google Play. Sans elle, aucune connexion réseau n'est possible, quoi que fasse le code.</p>
+
+<h2>6. Données conservées sur l'appareil</h2>
+<p>L'application enregistre localement quelques préférences techniques (par exemple le dernier niveau de compression choisi). Ces informations ne quittent jamais l'appareil et sont intégralement supprimées lorsque vous désinstallez l'application ou effacez ses données depuis les réglages Android.</p>
+
+<h2>7. Services tiers</h2>
+<p>Aucun. L'application n'intègre ni régie publicitaire, ni outil de mesure d'audience, ni service de rapport de plantage, ni bibliothèque de suivi.</p>
+<p>Le seul intermédiaire est Google Play, qui distribue l'application et applique sa propre politique de confidentialité, indépendante de celle-ci.</p>
+
+<h2>8. Enfants</h2>
+<p>L'application est un utilitaire tout public. Elle ne s'adresse pas spécifiquement aux enfants et ne collecte aucune donnée, quel que soit l'âge de l'utilisateur.</p>
+
+<h2>9. Vos droits</h2>
+<p>Le règlement général sur la protection des données (RGPD) vous ouvre des droits d'accès, de rectification, d'effacement, d'opposition et de portabilité. Ces droits s'exercent sur des données détenues par un responsable de traitement&nbsp;: en l'absence de toute collecte, l'éditeur ne détient aucune donnée vous concernant et n'a donc rien à communiquer, corriger ni effacer. Les seules données existantes sont sur votre téléphone, sous votre seul contrôle, et disparaissent à la désinstallation.</p>
+<p>Vous pouvez néanmoins nous écrire à tout moment à <a href="mailto:kwizustudio@gmail.com">kwizustudio@gmail.com</a>.</p>
+
+<h2>10. Modifications</h2>
+<p>Si une version future de l'application introduisait une collecte de données — par exemple de la publicité ou une mesure d'audience — cette page serait mise à jour <em>avant</em> la publication de cette version, et la date en haut de page modifiée en conséquence.</p>
+
+<footer>
+  Compresser Vidéo — Kwizu Studio · <a href="privacy-policy.html">English version</a>
+</footer>
+
+</main>
+</body>
+</html>

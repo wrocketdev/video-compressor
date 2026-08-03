@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Compress Video</title>
+<style>
+  :root { color-scheme: light dark; --encre:#16161a; --papier:#fff; --sourd:#5b5b66; --trait:#e4e4ea; --accent:#e2603f; }
+  @media (prefers-color-scheme: dark) {
+    :root { --encre:#f2f2f4; --papier:#141416; --sourd:#a0a0ab; --trait:#2a2a2f; --accent:#ff7a55; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; padding:2.5rem 1.25rem 5rem; background:var(--papier); color:var(--encre);
+         font:400 16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  main { max-width:44rem; margin:0 auto; }
+  h1 { font-size:1.75rem; line-height:1.25; margin:0 0 .35rem; letter-spacing:-.02em; }
+  h2 { font-size:1.075rem; margin:2.5rem 0 .6rem; letter-spacing:-.01em; }
+  .chapeau { color:var(--sourd); margin:0 0 2rem; font-size:.925rem; }
+  .resume { border-left:3px solid var(--accent); padding:.85rem 0 .85rem 1.1rem; margin:0 0 2rem;
+            background:color-mix(in srgb, var(--accent) 6%, transparent); border-radius:0 6px 6px 0; }
+  .resume p { margin:0; }
+  table { border-collapse:collapse; width:100%; margin:1rem 0; font-size:.9rem; display:block; overflow-x:auto; }
+  th, td { text-align:left; padding:.55rem .7rem; border-bottom:1px solid var(--trait); vertical-align:top; }
+  th { font-weight:600; }
+  a { color:var(--accent); }
+  ul { padding-left:1.15rem; }
+  li { margin:.3rem 0; }
+  footer { margin-top:3.5rem; padding-top:1.25rem; border-top:1px solid var(--trait); color:var(--sourd); font-size:.875rem; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Privacy Policy</h1>
+<p class="chapeau"><strong>Compress Video</strong> for Android · Version 1.0 · Last updated: 3 August 2026</p>
+
+<div class="resume">
+  <p><strong>In one sentence: this app collects no data, sends nothing over the internet, and requests no permission to access your files.</strong> Compression happens entirely on your phone.</p>
+</div>
+
+<h2>1. Who is responsible</h2>
+<p>The app is published by an independent developer (Kwizu Studio). For any question about this policy, write to <a href="mailto:kwizustudio@gmail.com">kwizustudio@gmail.com</a>.</p>
+
+<h2>2. No data is collected</h2>
+<p>The app does not collect, transmit or store on any server:</p>
+<ul>
+  <li>any identifying data (name, email, account, device identifier);</li>
+  <li>any usage data, audience statistics or analytics;</li>
+  <li>any advertising identifier;</li>
+  <li>any of your videos, nor any excerpt, thumbnail or metadata from them.</li>
+</ul>
+<p>There is no user account, no sign-up, and no server operated by the publisher.</p>
+
+<h2>3. Your videos never leave your phone</h2>
+<p>Compression is performed locally by the device's video processor. No file is uploaded, copied to a third-party service, or analysed remotely. The app works entirely in airplane mode.</p>
+
+<h2>4. How the app accesses your videos</h2>
+<p>The app is granted <strong>no permission to access your gallery or storage</strong>. It uses the Android Photo Picker: you pick a video yourself, and the system grants the app temporary access to that single file only. The app cannot browse, list or read anything else.</p>
+<p>The compressed video is saved to your gallery through MediaStore, a mechanism that likewise requires no permission.</p>
+
+<h2>5. Permissions requested</h2>
+<table>
+  <tr><th>Permission</th><th>Why</th><th>Required?</th></tr>
+  <tr>
+    <td><code>POST_NOTIFICATIONS</code></td>
+    <td>Show compression progress in the notification shade.</td>
+    <td>No — the app works normally if you deny it.</td>
+  </tr>
+  <tr>
+    <td><code>FOREGROUND_SERVICE</code><br><code>…_MEDIA_PROCESSING</code><br><code>…_DATA_SYNC</code></td>
+    <td>Keep a running compression alive when you leave the app's screen.</td>
+    <td>Granted automatically by the system, with no prompt. They give access to no data.</td>
+  </tr>
+  <tr>
+    <td><code>WAKE_LOCK</code><br><code>ACCESS_NETWORK_STATE</code></td>
+    <td>Declared by the Android video library used for encoding. The first keeps the CPU from sleeping during a compression. The second allows reading the connection state — the app does not use it.</td>
+    <td>Granted automatically, with no prompt. They give access to no personal data.</td>
+  </tr>
+</table>
+<p>The app does <strong>not</strong> request the <code>INTERNET</code> permission. This is verifiable: it does not appear in the permission list on the Google Play listing. Without it, no network connection is possible, whatever the code does.</p>
+
+<h2>6. Data kept on the device</h2>
+<p>The app stores a few technical preferences locally (for example the last compression level you chose). This information never leaves the device and is deleted in full when you uninstall the app or clear its data from Android settings.</p>
+
+<h2>7. Third-party services</h2>
+<p>None. The app embeds no advertising network, no analytics tool, no crash reporting service and no tracking library.</p>
+<p>The only intermediary is Google Play, which distributes the app under its own privacy policy, independent of this one.</p>
+
+<h2>8. Children</h2>
+<p>The app is a general-audience utility. It is not directed at children and collects no data regardless of the user's age.</p>
+
+<h2>9. Your rights</h2>
+<p>The GDPR grants you rights of access, rectification, erasure, objection and portability. These rights apply to data held by a data controller: since nothing is collected, the publisher holds no data about you and therefore has nothing to disclose, correct or erase. The only data that exists is on your phone, under your sole control, and disappears on uninstall.</p>
+<p>You may nonetheless contact us at any time at <a href="mailto:kwizustudio@gmail.com">kwizustudio@gmail.com</a>.</p>
+
+<h2>10. Changes</h2>
+<p>If a future version of the app introduced any data collection — advertising or analytics, for instance — this page would be updated <em>before</em> that version is published, and the date at the top changed accordingly.</p>
+
+<footer>
+  Compress Video — Kwizu Studio · <a href="politique-confidentialite.html">Version française</a>
+</footer>
+
+</main>
+</body>
+</html>
