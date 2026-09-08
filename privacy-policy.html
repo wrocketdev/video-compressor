@@ -32,109 +32,31 @@
 <main>
 
 <h1>Privacy Policy</h1>
-<p class="chapeau"><strong>Compress Video</strong> for Android · Version 1.0 · Last updated: 3 August 2026</p>
-
-<div class="resume">
-  <p><strong>Your videos never leave your phone.</strong> Compression happens entirely on the device, and no file, excerpt, thumbnail or file name is ever sent anywhere.</p>
-  <p style="margin-top:.6rem">The app does send <strong>anonymous technical measurements</strong>, described in section 4, used to understand how it is used and to improve the accuracy of its size estimates.</p>
-</div>
-
-<h2>1. Who is responsible</h2>
-<p>The app is published by an independent developer (Kwizu Studio). For any question about this policy, write to <a href="mailto:kwizustudio@gmail.com">kwizustudio@gmail.com</a>.</p>
-
-<h2>2. Your videos never leave your phone</h2>
-<p>Compression is performed locally by the device's video processor. No video file is uploaded, copied to a third-party service, or analysed remotely. This holds whatever the size or duration of the video.</p>
-<p>Never transmitted: your videos or any part of them, their thumbnails, their file names, their paths, or the identifiers the system assigns to the files you select.</p>
-
-<h2>3. What the app does not collect</h2>
-<ul>
-  <li>No identifying data: no name, no email address, no account, no phone number.</li>
-  <li>No advertising identifier, and no advertising — the app embeds no ad network.</li>
-  <li>No precise location.</li>
-  <li>No content of any kind.</li>
-</ul>
-<p>There is no user account and no sign-up.</p>
-
-<h2>4. The anonymous technical measurements</h2>
-<p>To understand how the app is used, and to fix the product's main known weakness — the gap between the size announced before compression and the size actually produced, which depends on each phone's encoder model — the app sends technical measurements.</p>
-
-<table>
-  <tr><th>Sent</th><th>Why</th></tr>
-  <tr>
-    <td>Dimensions, duration and bitrate of the input and output video; codec identity and the name of the device's hardware encoder</td>
-    <td>These are numbers and technical names. Aggregated across phone models, they let a constant calibrated on a single device be replaced by a value that is correct for yours.</td>
-  </tr>
-  <tr>
-    <td>Usage events: app opened, compression started, succeeded or failed</td>
-    <td>Measure real usage of the app and spot failures.</td>
-  </tr>
-  <tr>
-    <td>Device manufacturer and model, processor model, Android version, architecture, interface language, app version</td>
-    <td>Attach a measurement or a failure to a technical context. The processor model matters most: it determines the video encoder, and therefore the estimation gap being corrected.</td>
-  </tr>
-  <tr>
-    <td>A random installation identifier, and the IP address at the time of sending</td>
-    <td>Distinguishes two installations without identifying you. The identifier is regenerated if you reinstall the app; it is tied to no account. The IP address is inherent to any connection: it is used to infer a country, not an address.</td>
-  </tr>
-</table>
-
-<p>These measurements are processed by <strong>PostHog</strong>, on its European infrastructure, as a data processor. They are not sold, not shared with advertisers, and not used to profile or target you.</p>
-<p><strong>Legal basis</strong> (GDPR, art. 6(1)(f)): the publisher's legitimate interest in measuring how its app performs and correcting its defects. No content and no identifying data enters this processing.</p>
-
-<h2>5. How the app accesses your videos</h2>
-<p>The app is granted <strong>no permission to access your gallery or storage</strong>. It uses the Android Photo Picker: you pick a video yourself, and the system grants the app temporary access to that single file only. The app cannot browse, list or read anything else.</p>
-<p>The compressed video is saved to your gallery through MediaStore, a mechanism that likewise requires no permission.</p>
-
-<h2>6. Permissions requested</h2>
-<table>
-  <tr><th>Permission</th><th>Why</th><th>Required?</th></tr>
-  <tr>
-    <td><code>INTERNET</code></td>
-    <td>Send the technical measurements of section 4. That is the <strong>only</strong> use of the network: no video ever goes through it.</td>
-    <td>Granted automatically, with no prompt. Compression works fully offline.</td>
-  </tr>
-  <tr>
-    <td><code>POST_NOTIFICATIONS</code></td>
-    <td>Show compression progress in the notification shade.</td>
-    <td>No — the app works normally if you deny it.</td>
-  </tr>
-  <tr>
-    <td><code>FOREGROUND_SERVICE</code><br><code>…_MEDIA_PROCESSING</code><br><code>…_DATA_SYNC</code></td>
-    <td>Keep a running compression alive when you leave the app's screen.</td>
-    <td>Granted automatically, with no prompt. They give access to no data.</td>
-  </tr>
-  <tr>
-    <td><code>ACCESS_NETWORK_STATE</code><br><code>WAKE_LOCK</code></td>
-    <td>Declared by the Android video library (Media3) that performs the compression, not by the app itself. The first reports whether a connection exists, the second keeps the phone from sleeping mid-processing.</td>
-    <td>Granted automatically, with no prompt. They give access to no personal data.</td>
-  </tr>
-</table>
-<p>This list is exhaustive: it matches exactly what Google Play displays for the app, where you can check it yourself.</p>
-
-<h2>7. Data kept on the device</h2>
-<p>The app stores a few technical preferences locally: the number of successful compressions (used to offer the review prompt only once), and a small calibration table that records how closely your phone's encoder followed the requested bitrate, so that size estimates get more accurate as you use the app. That table holds bitrate numbers and the name of a system video component — nothing about your videos. This information does not leave the device and is deleted when you uninstall the app or clear its data from Android settings.</p>
-
-<h2>8. Third-party services</h2>
-<p><strong>PostHog</strong> — analytics and technical diagnostics, described in section 4. The only third-party service integrated into the app.</p>
-<p>The app embeds no ad network, no social network, and no payment service.</p>
-<p>Google Play distributes the app under its own privacy policy, independent of this one.</p>
-
-<h2>9. Retention</h2>
-<p>Technical measurements are kept for at most <strong>twelve months</strong>, then deleted. They are only useful for as long as they cover the devices and versions in circulation.</p>
-
-<h2>10. Children</h2>
-<p>The app is a general-audience utility. It is not directed at children and collects no data that would reveal a user's age.</p>
-
-<h2>11. Your rights</h2>
-<p>The GDPR grants you rights of access, rectification, erasure, objection and portability. Since the measurements in section 4 contain no identifying data, the publisher has in practice no way to link a record to a person, and therefore cannot retrieve "your" data from your name or address.</p>
-<p>Deletion is nonetheless possible, and the procedure is set out in full on the <a href="data-deletion.html">Data Deletion</a> page. In short: uninstalling the app or clearing its data destroys the installation identifier and stops all collection; to have already-sent measurements deleted, write to <a href="mailto:kwizustudio@gmail.com">kwizustudio@gmail.com</a> stating your phone model, the language you use the app in, and the period concerned.</p>
-
-<h2>12. Changes</h2>
-<p>Any change to what the app transmits will be reflected on this page <em>before</em> the version concerned is published, and the date at the top updated accordingly.</p>
-
-<footer>
-  Compress Video — Kwizu Studio · <a href="politique-confidentialite.html">Version française</a>
-</footer>
+<p class="chapeau"><strong>Compress Video</strong> for Android · Version 1.7.0 · Updated: 8 September 2026</p>
+<div class="resume"><p><strong>Compression stays on your phone.</strong> The app does not upload your videos, thumbnails, file names or paths to our servers, analytics or advertising services. If you choose Share, Android sends the video to the app or recipient you select.</p><p style="margin-top:.6rem">The free version uses advertising. Technical analytics and purchase verification also use a network connection. Individual video compression remains available offline.</p></div>
+<h2>1. Publisher</h2>
+<p>Kwizu Studio publishes this app. Contact: <a href="mailto:kwizustudio@gmail.com">kwizustudio@gmail.com</a>.</p>
+<h2>2. Video access and local processing</h2>
+<p>You choose videos through Android's system picker. The app processes the selected files on your device and saves compressed copies through MediaStore. It does not scan your whole library. The optional space-saving feature asks Android for your confirmation before moving selected originals to the trash after their compressed copies have been saved.</p>
+<h2>3. Technical analytics</h2>
+<p>PostHog, on its European infrastructure, processes usage events such as compression, export, advertising and Pro purchase outcomes; video dimensions, duration, bitrate and codec; device and processor model, system and app version, language; a random installation identifier and network IP address. The IP address may be used to infer a country. These are technical measurements, not video content.</p>
+<p>The measurements help improve compression estimates, reliability and the app's business model. Advertising revenue events contain the amount, currency, format and network, without your advertising identifier or video content. Installation identifiers and IP addresses are pseudonymous data, not a guarantee of anonymity. The app does not request your name, email address or phone number and has no user account.</p>
+<h2>4. Advertising and your choices</h2>
+<p>The free version integrates Google AdMob: a banner during individual compression, an interstitial before an individual result's first export when available, and an optional rewarded advertisement to unlock a batch. Pro removes these advertisements.</p>
+<p>The Google Mobile Ads SDK collects and shares IP addresses (which can indicate an approximate location), app and ad interactions, diagnostics, and device or account identifiers such as the Android advertising ID and app set ID, for advertising, measurement and fraud prevention. Data is encrypted in transit. The app does not request precise location permission or send video content to advertising services.</p>
+<p>Google's User Messaging Platform requests consent where required. When available, use the <strong>⋮ menu → Ad privacy choices</strong> to review or withdraw your choices. Refusing personalized advertising does not make Pro mandatory. Advertising availability and personalization depend on your choices and Google's SDK rules. Android settings also let you reset or delete your advertising ID.</p>
+<p>Details: <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Google's SDK data disclosures</a> and <a href="https://policies.google.com/privacy">Google's privacy policy</a>.</p>
+<h2>5. Pro purchases</h2>
+<p>Google Play processes payments. RevenueCat verifies purchases and restores Pro access using an app user identifier, purchase receipts or tokens, purchase history and entitlement status. We do not receive your payment card details. These records support the purchased features, fraud prevention and purchase analytics. See <a href="https://www.revenuecat.com/privacy">RevenueCat's privacy policy</a>.</p>
+<h2>6. Network and permissions</h2>
+<p>Network access supports PostHog, AdMob, consent and purchase verification. Notification permission is optional and is used for compression progress. Android foreground service and wake-lock permissions support ongoing processing. Advertising SDK permissions include advertising identifiers and applicable Android ad services. Video content is processed locally; sharing is performed only at your request.</p>
+<h2>7. Local storage</h2>
+<p>The app stores compression calibration, preferences, local export history, Pro access status, consent information, the time of the last full-screen advertisement and any earned batch access. Cached working files and these local settings are cleared when you clear the app's data or uninstall it. Videos saved in your gallery remain under your control. Clearing local data does not cancel a Google Play purchase or erase provider-side records.</p>
+<h2>8. Retention and deletion</h2>
+<p>Our PostHog technical measurements are retained for up to twelve months. Google and RevenueCat retain their service records according to their policies and applicable requirements. Uninstalling stops future activity from this installation; it does not itself delete records already transmitted. Instructions and contact details are available on the <a href="data-deletion.html">Data Deletion</a> page.</p>
+<h2>9. Your rights and changes</h2>
+<p>You can contact the publisher about access, correction or deletion of data, or to object to processing. We may need information that lets us locate the relevant installation or transaction. Where consent is requested, it can be withdrawn through the advertising privacy choices described above. The app is a general-audience utility and is not directed specifically at children. This page will be updated when our data practices change.</p>
+<footer>Compress Video — Kwizu Studio · <a href="politique-confidentialite.html">Version française</a></footer>
 
 </main>
 </body>

@@ -32,109 +32,31 @@
 <main>
 
 <h1>Politique de confidentialité</h1>
-<p class="chapeau">Application <strong>Compresser Vidéo</strong> (Android) · Version 1.0 · Dernière mise à jour : 3 août 2026</p>
-
-<div class="resume">
-  <p><strong>Vos vidéos ne quittent jamais votre téléphone.</strong> La compression a lieu entièrement sur l'appareil, et aucun fichier, extrait, miniature ou nom de fichier n'est envoyé nulle part.</p>
-  <p style="margin-top:.6rem">L'application transmet en revanche des <strong>mesures techniques anonymes</strong>, décrites au point 4, qui servent à savoir comment elle est utilisée et à améliorer la justesse de ses estimations de taille.</p>
-</div>
-
-<h2>1. Qui est responsable</h2>
-<p>L'application est éditée par un développeur indépendant (Kwizu Studio). Pour toute question relative à cette politique&nbsp;: <a href="mailto:kwizustudio@gmail.com">kwizustudio@gmail.com</a>.</p>
-
-<h2>2. Vos vidéos ne quittent jamais votre téléphone</h2>
-<p>La compression est effectuée localement par le processeur vidéo de l'appareil. Aucun fichier vidéo n'est téléversé, copié vers un service tiers, ni analysé à distance. Cela reste vrai quelle que soit la taille ou la durée de la vidéo.</p>
-<p>Ne sont jamais transmis&nbsp;: vos vidéos ou une partie de celles-ci, leurs miniatures, leurs noms de fichier, leurs chemins d'accès, ni les identifiants que le système attribue aux fichiers que vous sélectionnez.</p>
-
-<h2>3. Ce que l'application ne collecte pas</h2>
-<ul>
-  <li>Aucune donnée d'identification&nbsp;: ni nom, ni adresse e-mail, ni compte, ni numéro de téléphone.</li>
-  <li>Aucun identifiant publicitaire, et aucune publicité — l'application n'embarque pas de régie.</li>
-  <li>Aucune position géographique précise.</li>
-  <li>Aucun contenu, de quelque nature que ce soit.</li>
-</ul>
-<p>Il n'existe aucun compte utilisateur et aucune inscription.</p>
-
-<h2>4. Les mesures techniques anonymes</h2>
-<p>Pour savoir comment l'application est utilisée et pour corriger le principal défaut connu du produit — l'écart entre la taille annoncée avant compression et la taille réellement obtenue, qui dépend du modèle d'encodeur de chaque téléphone — l'application envoie des mesures techniques.</p>
-
-<table>
-  <tr><th>Transmis</th><th>Pourquoi</th></tr>
-  <tr>
-    <td>Dimensions, durée et débit de la vidéo d'entrée et de sortie&nbsp;; identité du codec et du nom de l'encodeur matériel de l'appareil</td>
-    <td>Ce sont des nombres et des noms techniques. Croisés sur plusieurs modèles de téléphones, ils permettent de remplacer une constante étalonnée sur un seul appareil par une valeur juste pour le vôtre.</td>
-  </tr>
-  <tr>
-    <td>Évènements d'usage&nbsp;: lancement, compression démarrée, réussie ou échouée</td>
-    <td>Mesurer l'utilisation réelle de l'application et repérer les pannes.</td>
-  </tr>
-  <tr>
-    <td>Fabricant et modèle de l'appareil, modèle du processeur, version d'Android, architecture, langue de l'interface, version de l'application</td>
-    <td>Rattacher une mesure ou une panne à un contexte technique. Le modèle de processeur est indispensable&nbsp;: c'est lui qui détermine l'encodeur vidéo, donc l'écart d'estimation à corriger.</td>
-  </tr>
-  <tr>
-    <td>Un identifiant d'installation aléatoire, et l'adresse IP au moment de l'envoi</td>
-    <td>Distingue deux installations sans vous identifier. L'identifiant est régénéré si vous réinstallez l'application&nbsp;; il n'est rattaché à aucun compte. L'adresse IP est inhérente à toute connexion&nbsp;: elle sert à déduire un pays, pas une adresse.</td>
-  </tr>
-</table>
-
-<p>Ces mesures sont traitées par <strong>PostHog</strong>, sur son infrastructure européenne, en qualité de sous-traitant. Elles ne sont ni vendues, ni transmises à des annonceurs, ni utilisées pour vous profiler ou vous cibler.</p>
-<p><strong>Base légale</strong> (RGPD, art. 6.1.f)&nbsp;: l'intérêt légitime de l'éditeur à mesurer le fonctionnement de son application et à en corriger les défauts. Aucun contenu ni donnée identifiante n'entre dans ce traitement.</p>
-
-<h2>5. Comment l'application accède à vos vidéos</h2>
-<p>L'application n'obtient <strong>aucune permission d'accès à votre galerie ou à votre stockage</strong>. Elle utilise le sélecteur de photos d'Android (<em>Photo Picker</em>)&nbsp;: vous choisissez vous-même une vidéo, et le système n'accorde à l'application qu'un accès temporaire à ce seul fichier. L'application ne peut ni parcourir, ni lister, ni lire quoi que ce soit d'autre.</p>
-<p>La vidéo compressée est enregistrée dans votre galerie via <em>MediaStore</em>, mécanisme qui ne requiert lui non plus aucune permission.</p>
-
-<h2>6. Permissions demandées</h2>
-<table>
-  <tr><th>Permission</th><th>Pourquoi</th><th>Obligatoire&nbsp;?</th></tr>
-  <tr>
-    <td><code>INTERNET</code></td>
-    <td>Envoyer les mesures techniques du point 4. C'est le <strong>seul</strong> usage du réseau&nbsp;: aucune vidéo n'y passe.</td>
-    <td>Accordée automatiquement, sans écran de demande. La compression fonctionne intégralement hors connexion.</td>
-  </tr>
-  <tr>
-    <td><code>POST_NOTIFICATIONS</code></td>
-    <td>Afficher la progression de la compression dans la barre de notifications.</td>
-    <td>Non — l'application fonctionne normalement si vous la refusez.</td>
-  </tr>
-  <tr>
-    <td><code>FOREGROUND_SERVICE</code><br><code>…_MEDIA_PROCESSING</code><br><code>…_DATA_SYNC</code></td>
-    <td>Poursuivre une compression en cours lorsque vous quittez l'écran de l'application.</td>
-    <td>Accordées automatiquement, sans écran de demande. Ne donnent accès à aucune donnée.</td>
-  </tr>
-  <tr>
-    <td><code>ACCESS_NETWORK_STATE</code><br><code>WAKE_LOCK</code></td>
-    <td>Déclarées par la bibliothèque vidéo d'Android (Media3) qui effectue la compression, et non par l'application elle-même. La première permet de savoir si une connexion existe, la seconde d'empêcher le téléphone de s'endormir pendant un traitement.</td>
-    <td>Accordées automatiquement, sans écran de demande. Ne donnent accès à aucune donnée personnelle.</td>
-  </tr>
-</table>
-<p>Cette liste est exhaustive&nbsp;: elle correspond exactement à ce que Google Play affiche pour l'application, et vous pouvez l'y vérifier.</p>
-
-<h2>7. Données conservées sur l'appareil</h2>
-<p>L'application enregistre localement quelques préférences techniques&nbsp;: le nombre de compressions réussies (qui sert à ne proposer de laisser un avis qu'une seule fois), et une petite table d'étalonnage qui retient à quel point l'encodeur de votre téléphone a suivi le débit demandé, afin que les estimations de taille deviennent plus justes à l'usage. Cette table ne contient que des nombres de débit et le nom d'un composant vidéo du système — rien qui décrive vos vidéos. Ces informations ne quittent pas l'appareil et sont supprimées lorsque vous désinstallez l'application ou effacez ses données depuis les réglages Android.</p>
-
-<h2>8. Services tiers</h2>
-<p><strong>PostHog</strong> — mesure d'audience et diagnostic technique, décrits au point 4. Seul service tiers intégré à l'application.</p>
-<p>L'application n'embarque ni régie publicitaire, ni réseau social, ni service de paiement.</p>
-<p>Google Play distribue l'application et applique sa propre politique de confidentialité, indépendante de celle-ci.</p>
-
-<h2>9. Durée de conservation</h2>
-<p>Les mesures techniques sont conservées au maximum <strong>douze mois</strong>, puis supprimées. Elles n'ont d'intérêt que le temps de couvrir le parc d'appareils et les versions en circulation.</p>
-
-<h2>10. Enfants</h2>
-<p>L'application est un utilitaire tout public. Elle ne s'adresse pas spécifiquement aux enfants et ne collecte aucune donnée permettant de connaître l'âge de l'utilisateur.</p>
-
-<h2>11. Vos droits</h2>
-<p>Le RGPD vous ouvre des droits d'accès, de rectification, d'effacement, d'opposition et de portabilité. Les mesures du point 4 ne contenant aucune donnée identifiante, l'éditeur n'a en pratique aucun moyen de relier un enregistrement à une personne, et ne peut donc pas retrouver « vos » données à partir de votre nom ou de votre adresse.</p>
-<p>La suppression reste néanmoins possible, et la marche à suivre est décrite en détail sur la page <a href="suppression-donnees.html">Suppression des données</a>. En résumé&nbsp;: désinstaller l'application ou effacer ses données détruit l'identifiant d'installation et arrête toute collecte&nbsp;; pour faire supprimer les mesures déjà envoyées, écrivez à <a href="mailto:kwizustudio@gmail.com">kwizustudio@gmail.com</a> en indiquant le modèle de votre téléphone, la langue d'utilisation et la période concernée.</p>
-
-<h2>12. Modifications</h2>
-<p>Toute évolution de ce que l'application transmet sera reportée sur cette page <em>avant</em> la publication de la version concernée, et la date en haut de page modifiée en conséquence.</p>
-
-<footer>
-  Compresser Vidéo — Kwizu Studio · <a href="privacy-policy.html">English version</a>
-</footer>
+<p class="chapeau"><strong>Compresser Vidéo</strong> pour Android · Version 1.7.0 · Mise à jour : 8 septembre 2026</p>
+<div class="resume"><p><strong>La compression reste sur votre téléphone.</strong> L'application n'envoie pas vos vidéos, miniatures, noms ou chemins de fichiers à nos serveurs, aux outils de mesure ou aux services publicitaires. Si vous choisissez Partager, Android transmet la vidéo à l'application ou au destinataire que vous sélectionnez.</p><p style="margin-top:.6rem">La version gratuite utilise de la publicité. Les mesures techniques et la vérification des achats utilisent également le réseau. La compression individuelle reste disponible hors ligne.</p></div>
+<h2>1. Éditeur</h2>
+<p>Cette application est publiée par Kwizu Studio. Contact : <a href="mailto:kwizustudio@gmail.com">kwizustudio@gmail.com</a>.</p>
+<h2>2. Accès aux vidéos et traitement local</h2>
+<p>Vous choisissez les vidéos dans le sélecteur système Android. L'application traite ces fichiers sur votre appareil et enregistre les copies compressées avec MediaStore. Elle ne parcourt pas toute votre photothèque. La fonction facultative de libération d'espace demande votre confirmation à Android avant de mettre à la corbeille les originaux sélectionnés, une fois leurs copies compressées enregistrées.</p>
+<h2>3. Mesures techniques</h2>
+<p>PostHog, sur son infrastructure européenne, traite les événements d'utilisation : compression, export, résultats publicitaires et achats Pro ; les dimensions, durée, débit et codec vidéo ; le modèle de téléphone et de processeur, les versions du système et de l'application, la langue ; un identifiant d'installation aléatoire et l'adresse IP réseau. Celle-ci peut servir à déduire un pays. Il s'agit de mesures techniques, pas du contenu des vidéos.</p>
+<p>Ces mesures servent à améliorer les estimations, la fiabilité et le modèle économique de l'application. Les événements de revenu publicitaire contiennent le montant, la devise, le format et le réseau, sans votre identifiant publicitaire ni contenu vidéo. Les identifiants d'installation et adresses IP sont des données pseudonymes, sans garantie d'anonymat. L'application ne demande pas votre nom, adresse e-mail ou numéro de téléphone et ne crée pas de compte utilisateur.</p>
+<h2>4. Publicité et choix disponibles</h2>
+<p>La version gratuite intègre Google AdMob : une bannière pendant la compression individuelle, un interstitiel avant le premier export d'un résultat individuel lorsqu'il est disponible, et une publicité récompensée facultative pour débloquer un lot. Pro supprime ces publicités.</p>
+<p>Le SDK Google Mobile Ads collecte et partage des adresses IP pouvant indiquer une position approximative, des interactions avec l'application et les annonces, des diagnostics, ainsi que des identifiants d'appareil ou de compte tels que l'identifiant publicitaire Android et l'app set ID, pour la publicité, la mesure et la prévention de la fraude. Les données sont chiffrées pendant leur transmission. L'application ne demande pas la localisation précise et n'envoie pas de contenu vidéo aux services publicitaires.</p>
+<p>La plateforme de consentement Google UMP sollicite votre choix lorsque cela est nécessaire. Lorsqu'il est disponible, le <strong>menu ⋮ → Choix de confidentialité publicitaire</strong> permet de revoir ou retirer vos choix. Refuser la publicité personnalisée ne rend pas Pro obligatoire. La disponibilité et la personnalisation des annonces dépendent de vos choix et des règles du SDK Google. Les réglages Android permettent également de réinitialiser ou supprimer votre identifiant publicitaire.</p>
+<p>Détails : <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">déclarations du SDK Google</a> et <a href="https://policies.google.com/privacy?hl=fr">politique de confidentialité Google</a>.</p>
+<h2>5. Achats Pro</h2>
+<p>Google Play traite les paiements. RevenueCat vérifie les achats et restaure l'accès Pro à partir d'un identifiant utilisateur de l'application, des reçus ou jetons d'achat, de l'historique des achats et des droits d'accès. Nous ne recevons pas vos coordonnées bancaires. Ces données servent aux fonctionnalités achetées, à la prévention de la fraude et à l'analyse des achats. Voir la <a href="https://www.revenuecat.com/privacy">politique de confidentialité RevenueCat</a>.</p>
+<h2>6. Réseau et permissions</h2>
+<p>Le réseau sert à PostHog, AdMob, au consentement et à la vérification des achats. La permission de notification, facultative, permet d'afficher la progression. Les permissions de service au premier plan et de maintien en éveil soutiennent le traitement en cours. Les permissions du SDK publicitaire comprennent les identifiants publicitaires et les services publicitaires Android applicables. Le traitement vidéo reste local ; le partage n'a lieu qu'à votre demande.</p>
+<h2>7. Stockage local</h2>
+<p>L'application conserve l'étalonnage de compression, les préférences, l'historique local des exports, le statut Pro, les informations de consentement, l'heure de la dernière publicité plein écran et les éventuels droits à un lot. Les fichiers de travail en cache et ces paramètres sont supprimés lorsque vous effacez les données de l'application ou la désinstallez. Les vidéos enregistrées dans votre galerie restent sous votre contrôle. Effacer les données locales n'annule pas un achat Google Play et n'efface pas les données déjà transmises aux prestataires.</p>
+<h2>8. Conservation et suppression</h2>
+<p>Nos mesures techniques PostHog sont conservées jusqu'à douze mois. Google et RevenueCat conservent les données de leurs services selon leurs politiques et obligations applicables. Désinstaller arrête l'activité future de cette installation, sans supprimer automatiquement les enregistrements déjà transmis. Les démarches et coordonnées figurent sur la page <a href="suppression-donnees.html">Suppression des données</a>.</p>
+<h2>9. Vos droits et modifications</h2>
+<p>Vous pouvez contacter l'éditeur pour demander l'accès, la correction ou la suppression de données, ou vous opposer à leur traitement. Des précisions permettant de retrouver l'installation ou la transaction concernée peuvent être nécessaires. Lorsqu'un consentement est sollicité, il peut être retiré dans les choix publicitaires décrits ci-dessus. L'application est un utilitaire généraliste qui ne s'adresse pas spécifiquement aux enfants. Cette page sera actualisée si nos pratiques évoluent.</p>
+<footer>Compresser Vidéo — Kwizu Studio · <a href="privacy-policy.html">English version</a></footer>
 
 </main>
 </body>
